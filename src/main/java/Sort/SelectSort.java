@@ -1,6 +1,7 @@
 package Sort;
 
 public class SelectSort {
+    //选择排序
     public static void selectSort(int[] arr){
         if(arr == null || arr.length < 2) return;
 
@@ -12,7 +13,7 @@ public class SelectSort {
             swap(arr,minindex,i);
         }
     }
-
+    //冒泡排序
     public static void bubbleSort(int[] arr){
         if(arr == null || arr.length < 2) return;
 
@@ -36,7 +37,7 @@ public class SelectSort {
             }
         }
     }
-
+    // 交换
     private static void swap(int[] arr, int i, int j) {
         int tmp = arr[i];
         arr[i] = arr[j];
