@@ -1,20 +1,8 @@
-package Sort;
+package ZuoShen.Class01;
 
 import java.util.Arrays;
 
-public class SelectSort {
-    //选择排序
-    public static void selectSort(int[] arr){
-        if(arr == null || arr.length < 2) return;
-
-        for(int i=0;i<arr.length-1;i++){
-            int minindex = i;
-            for(int j=i+1;j<arr.length;j++){
-                minindex = arr[j]>arr[minindex] ? minindex : j;
-            }
-            swap(arr,minindex,i);
-        }
-    }
+public class _02_bubbleSort {
     //冒泡排序
     public static void bubbleSort(int[] arr){
         if(arr == null || arr.length < 2) return;
@@ -24,18 +12,6 @@ public class SelectSort {
                 if(arr[i]>arr[i+1]){
                     swap(arr,i,i+1);
                 }
-            }
-        }
-    }
-
-    //插入排序
-    public static void insertSort(int[] arr){
-        if(arr == null || arr.length < 2) return;
-
-
-        for (int i=1;i<arr.length;i++){
-            for(int j=i-1;j>=0&&arr[j]>arr[j+1];j--){
-                swap(arr,j,j+1);
             }
         }
     }
@@ -128,8 +104,7 @@ public class SelectSort {
 
         int[] arr = generateRandomArray(maxSize, maxValue);
         printArray(arr);
-        selectSort(arr);
+        bubbleSort(arr);
         printArray(arr);
     }
-
 }
