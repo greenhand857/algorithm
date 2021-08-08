@@ -3,6 +3,8 @@ package ZuoShen.Class02;
 import java.util.Stack;
 
 public class _06_TwoStackImplQueue {
+    // 算法思路：从pop()栈中弹出元素，只有当pop栈为空时，才可以将push栈中的元素倒入pop栈中
+    // 且必须一次性导出所有元素
     public static class TwoStackQueue{
         public Stack<Integer> stackPush;
         public Stack<Integer> stackPop;
